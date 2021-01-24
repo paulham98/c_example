@@ -1,24 +1,22 @@
 #include<stdio.h>
 #include<string.h>
 void main() {
-	// [���ڿ�]
+	// [문자열]
 
-   // ���ڹ迭+'\0'(�� ����,null ����,1byte)  ==  ���ڿ�
+	// 문자배열+'\0'(널 문자,null 문자,1byte)  ==  문자열
 
 	char arr[] = { 'a','p','p','l','e' };
-	// ��Ҵ� 5�� ����, 5byte
+	// 요소는 5개 존재, 5byte
 
 	char str[] = "apple";
 	char str1[] = { 'a','p','p','l','e','\0' };
-	// ��Ҵ� 6�� ����, 6byte
+	// 요소는 6개 존재, 6byte
 
-	char str2[10];
-	
+	char str2[20];
 	//str2 = "banana"; -> xxx
-	//�迭�� == &�迭[0]
-	//str2 == &str2[0];      
 
-	//scanf("%s", str2);  �̷��� �ϸ� ���⳪ ���͸� �ν���������      //byteũ�⿡ ����
-	// gets(str2);//�� �Լ���  c++�� ���� �Լ��� c���Ϸ� �ٲ������
-	// printf("�Է��� ���ڿ���[%s]�Դϴ�.\n", str2);
-}
+	printf("문자열입력: ");
+	scanf("%s", str2); // byte(크기)에 유의!
+	// 배열명 == &배열[0]
+	//gets(str2);
+	printf("입력한 문자열은 [%s]입니다.\n", str2);
