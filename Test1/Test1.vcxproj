@@ -313,8 +313,16 @@
     <ClCompile Include="Test_41.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="Test_42.cpp" />
-    <ClCompile Include="Test_43.cpp" />
+    <ClCompile Include="Test_42.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Test_43.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Test_44.cpp" />
+    <ClCompile Include="Test_45.cpp" />
+    <ClCompile Include="Test_46.cpp" />
+    <ClCompile Include="Test_47.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pointheader.h" />
