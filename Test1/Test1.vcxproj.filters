@@ -165,6 +165,9 @@
     <ClCompile Include="Test_47.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="Test_47_1.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pointheader.h">
