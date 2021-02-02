@@ -25,21 +25,17 @@ public:
         this->level = level;
         this->type = type;
     }
-    void attack() {
-        if (game()) {
-            cout << "공격가능!" << endl;
-        }
-    }
-    void speak() {
-        cout << "울음소리" << endl;
-    }
+    virtual void attack() = 0;
+    
+    virtual void speak() = 0;
+    
 };
 class Elec :public Pocket {
 public:
     Elec(string name, int level) :Pocket(name, level, "전기") {
 
     }
-    void attack() {
+    void attack() {// 피카츄 라이츄안에서 attack을 따로 정의하면 가상함수 사용할수있음
         if (game()) {
             cout <<   "백만볼트!!!" << endl;
         }
@@ -54,12 +50,42 @@ public:
         cout << "피카피카" << endl;
     }
 };
-void main() {
+class Rai : public Elec {
+public:
+    Rai(int level = 5) :Elec("라이츄", level) {
 
+    }
+    void speak() {
+        cout << "라이츄~" << endl;
+    }
+};
+void f(Pocket* p) {
+    p->attack();
+}
+void main() {
+    /*
     Pika p = Pika();
     p.attack();
     p.attack();
     p.attack();
     p.speak();
+    */
+    srand(time(NULL));
+
+    Pocket* arr[2];
+    arr[0] = new Pika();
+    arr[1] = new Rai();
+    f(arr[0]);
+
+
+
+    Pocket** book = new Pocket * [2];
+    book[0] = new Pika();
+    book[1] = new Rai();
+
+    for (int i = 0; i < 2; i++) {
+        book[i]->attack();
+        book[i]->speak();
+    }
 
 }
