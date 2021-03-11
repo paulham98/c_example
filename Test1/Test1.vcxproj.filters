@@ -201,6 +201,12 @@
     <ClCompile Include="1026.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="1084.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1087.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pointheader.h">
