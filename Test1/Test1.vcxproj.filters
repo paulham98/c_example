@@ -207,6 +207,21 @@
     <ClCompile Include="1087.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="1088.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1089.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1090.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1092.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1093.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pointheader.h">
