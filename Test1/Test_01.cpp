@@ -1,6 +1,6 @@
 #include<stdio.h>//STandInOut.Headerfile 전처리기어
 int sum(int a,int b);
-void main() {
+int main() {
 	/*
 	//printf("안녕하세요!\n");
 	//printf("다음주 까지 잘부탁드립니다~^^\n\n");
