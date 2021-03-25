@@ -44,6 +44,7 @@ int main(){
         }
     }
 }
+
 void push(char input){
     if(top >= (STACK_SIZE-1)){ //스택이 차면 더이상 삽입 불가능
         printf("Stack is full!");
@@ -52,7 +53,6 @@ void push(char input){
         stack[++top] = input;
     }
 }
-
 void print(void){
     printf("<Stack>:");
     for(int i = 0 ; i <= top; i++){
@@ -60,7 +60,6 @@ void print(void){
     }
     printf("\n");
 }
-
 char pop(void){
     if(isEmpty()){
         printf("Stack is Empty!\n");
@@ -68,7 +67,6 @@ char pop(void){
     printf("pop element: %c\n", stack[top]);
     return stack[top--];//배열로 스택을 구현할때 그냥 커서를 하나 내려줌으로써 위에 있는걸 없는 취급 
 }
-
 char peek(void){
     if(isEmpty()){
         printf("Stack is Empty!\n");
@@ -77,7 +75,6 @@ char peek(void){
     }
     return stack[top];
 }
-
 int isEmpty(void){
     if(top == -1){
         return 1; // true 
@@ -85,12 +82,10 @@ int isEmpty(void){
         return 0; // false
     }
 }
-
 int getSize(void){
     printf("Stack size: %d\n", top+1);
     return top+1;
 }
-
 void reverse(void){
     printf("Reverse Stack:");
     for(int i = top; i >= 0; i--){
