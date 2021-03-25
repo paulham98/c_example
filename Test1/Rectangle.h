@@ -10,6 +10,7 @@ public:
 		this->yLow = yLow;
 		int h = xLow * yLow;
 		printf("≥Ù¿Ã: %d", &h);
+		return h;
 	}
 	inline int GetWidth() {
 
