@@ -9,6 +9,12 @@ public:
 		this->height = height;
 		printf("??: %d", &height);//sero
 		return height;
+	inline int getHeight(int xLow, int yLow) {
+		this->xLow = xLow;
+		this->yLow = yLow;
+		int h = xLow * yLow;
+		printf("≥Ù¿Ã: %d", &h);
+		return h;
 	}
 
 	inline int GetWidth(int width) {
