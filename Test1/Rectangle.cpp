@@ -3,7 +3,7 @@
 
 int main() {
 	Rectangle rec = Rectangle();
-    int x, y;
-    scanf("%d %d", &x, &y);
-    rec.getHeight(x, y);
+    int x;
+    scanf("%d", &x);
+    rec.getHeight(x);
 }
