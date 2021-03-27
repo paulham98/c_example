@@ -41,8 +41,30 @@ int main(){
                 return -1;
             }
             ch = pop();
+            if(ch !='{'){
+                 printf("괄호가 맞지않습니다.\n");
+                return -1;
+            }
+        }
+        else if (str[i] == ']'){
+            if(isEmpty()){
+                 printf("괄호가 맞지않습니다.\n");
+                return -1;
+            }
+            ch = pop();
+            if( ch != '['){
+                 printf("괄호가 맞지않습니다.\n");
+                return -1;
+            }
         }
     }
+    if(!isEmpty){
+         printf("괄호가 맞지않습니다.\n");
+                return -1;
+    }
+
+    printf("괄호가 정상압니다.\n");
+    return 0;
 }
 
 void push(char input){
@@ -87,9 +109,8 @@ int getSize(void){
     return top+1;
 }
 void reverse(void){
-    printf("Reverse Stack:");
-    for(int i = top; i >= 0; i--){
-        printf("%c ", stack[i]);
+     printf("Reverse Stack:\n");
+    while(!isEmpty){
+        printf("%c ", pop);
     }
-    printf("\n");
 }

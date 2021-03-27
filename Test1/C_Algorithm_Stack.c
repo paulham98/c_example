@@ -122,9 +122,9 @@ int getSize(void){
 }
 
 void reverse(void){
-    printf("Reverse Stack:");
-    for(int i = top; i >= 0; i--){
-        printf("%c ", stack[i]);
+    printf("Reverse Stack:\n");
+    while(!isEmpty){
+        printf("%c ", pop);
     }
     printf("\n");
 }
