@@ -74,11 +74,87 @@ void print(void){
     printf("\n");
 }
 void del(void){
+    int sel, id;
+    NODE* cur;
 
+    if(start == NULL) return;
+    else if(start->next == NULL){// 노드가 한개있을떄
+        free(start);
+        start = NULL;
+        return;
+    }else if (start->next->next ==NULL) {//노드가 두개 있을때
+        printf("1. 시작지점 delete\n");
+        printf("2. 마지막지점 delete\n");
+        printf("======================\n");
+        scanf("%d", &sel);
+
+        if(sel >= 3){
+            printf("잘못된 입력입니다.");
+            return;
+        }
+    }else { //노드가 3개 이상 있음
+        printf("1. 시작 지점 delete\n");
+        printf("2. 마지막 지점 delete\n");
+        printf("3. 중간 지점 delete\n");
+        printf("=======================\n");
+        scanf("%d", &sel);
+        
+        if(sel > 3){
+            printf("잘못된 입력입니다.\n");
+            return;
+        }
+    }
+
+    if(sel == 1)
+    {
+        delete_start();
+    }else if(sel == 2){
+        // 현재노드를 마지막노드 전 노드를 가르키게 함
+        for(cur =start; cur->next->next !=NULL; cur = cur->next );
+        delete_end(cur);
+    }else if(sel == 3){
+        print();
+        printf("delete를 할 노드 id를 입력하세요: ");
+        scanf("%d", &id);
+        for(cur =start; cur !=NULL; cur = cur->next ){
+            if(cur->next->id ==id) // 삭제할 노드의 전 노드로 이동
+            break;
+        }
+        
+        delete_mid(cur);
+
+    }else {
+        //잘못된 입력
+        
+        printf("잘못된 입력입니다.\n");
+        return;
+    }
+}
+
+//시작지점 delete 함수
+void delete_start(void){
+    NODE* tmp;
+
+    tmp= start->next;
+    free(start);
+    start = tmp;
+}
+// 마지막 지점 delete 함수
+void delete_end(NODE* pre_del){
+    free(pre_del->next);
+    pre_del->next = NULL;
+}
+// 중간 지점 delete 함수
+void delete_mid(NODE* pre_del){
+    
+    NODE* del;
+    del = pre_del->next; // 삭제할 노드
+    pre_del->next = del->next; // 삭제 노드의 이전 노드와 삭제 노드의 다음 노드를 이어줌
+    free(del);
 }
 
 void free_all(void){
-    NODE* cur = start;
+    NODE* cur;
     NODE* del = start;
     if(start == NULL){
         return;
@@ -91,6 +167,7 @@ void free_all(void){
         }
         free(del);
     }
+    start = NULL;
 } 
 
 
