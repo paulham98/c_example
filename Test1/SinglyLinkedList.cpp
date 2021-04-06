@@ -19,6 +19,10 @@ void insert_start(NODE* new_node);
 void insert_end(NODE* end, NODE* new_node);
 void insert_mid(NODE* mid, NODE* new_node);
 void free_all(void);
+void delete_start(void);
+void delete_mid(NODE* pre_del);
+void delete_end(NODE* pre_del);
+
 
 int main(void){
     int sel;
