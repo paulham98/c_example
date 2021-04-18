@@ -9,7 +9,9 @@ SparseMatrix SparseMatrix::Multiply(SparseMatrix b)
         currRowA = smArray[0].row;
     // set boundary conditions
     if (terms == capacity)
+    {
         ChangeSize1D(terms + 1);
+    }
     bXpose.ChangeSize1D(bXpose.terms + 1);
     smArray[terms].row = rows;
     bXpose.smArray[b.terms].row = b.cols;
