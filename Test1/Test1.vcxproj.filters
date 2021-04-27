@@ -234,6 +234,12 @@
     <ClCompile Include="C_Queue.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="Recursion_ncr.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Recursion_string.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pointheader.h">
