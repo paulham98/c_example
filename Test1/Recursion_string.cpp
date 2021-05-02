@@ -25,7 +25,7 @@ void s_combination(char* arr, char* sel, int n, int cnt) {
 		cout << endl;
 		return;
 	}
-	for (int i = 0; i < n; i++) {
+	for (int i = 0; i < 2; i++) {
 		sel[cnt] = arr[i];
 		s_combination(arr, sel, n, cnt + 1);
 	}
@@ -34,11 +34,11 @@ void s_combination(char* arr, char* sel, int n, int cnt) {
 }
 
 int main() {
-	char arr[2] = { 'a', 'b' };
-	int n;
+	char arr[2] = { 'a', 'b' }; // a,b 배열
+	int n; // 배열 길이
 	scanf("%d", &n);
-	char* sel = new char[n];
+	char* sel = new char[n]; // 배열 할당 
 	s_combination(arr, sel, n, 0);
 
-	delete[] arr;
+	delete[] sel;
 }
