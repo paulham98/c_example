@@ -5,7 +5,6 @@
 
 using namespace std;
 
-LinkedList::LinkedList(){}
 void LinkedList:: Append(int data){
     node* new_node = new node;
     size++;
@@ -19,6 +18,18 @@ void LinkedList:: Append(int data){
         last = last->next;
     }
 }
+void LinkedList:: Prepend(int data){
+    node* new_node = new node;
+    size++;
+    new_node-> data = data;
+    if(head == nullptr){
+        head = new_node;
+        last = new_node;
+    }else{
+        new_node->next = head;
+        head = new_node;
+    }
+}
 int LinkedList:: Length() {
     return size;
     }    // List에 있는 Node의 수를 return
@@ -30,3 +41,5 @@ void LinkedList:: Print(){
     }
     printf("\n");
 }
+
+

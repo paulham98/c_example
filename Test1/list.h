@@ -13,7 +13,8 @@ private:
     node* last;
     int size = 0;
 public:
-void Append(int data){}
-int Length(){}    
-void Print(){}
+void Append(int data);
+void Prepend(int data);
+int Length();    
+void Print();
 };
