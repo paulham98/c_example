@@ -5,16 +5,18 @@ using namespace std;
 class node{
 public:
     int data;
-    node* next = nullptr;
+    node* next;
+    node* prev;
 };
 class LinkedList{
 private:
     node* head;
-    node* last;
+    node* tail;
     int size = 0;
 public:
 void Append(int data);
 void Prepend(int data);
 int Length();    
 void Print();
+void PrintReverse();
 };
