@@ -8,4 +8,14 @@ void Hanoi(int n, char from, char by, char to) {
 		char by : 원반을 이동하는 과정에서 거쳐가는 탑
 		char to : 원반을 이동할 목적지 탑
 	*/
+	if(n == 1){
+		cout << from << " => " << to << endl;
+	}else{
+		Hanoi(n-1, from, to, by);
+		cout << from << " => " << to << endl;
+		Hanoi(n-1, by, from, to);
+	}
+}
+int main(){
+	Hanoi(3, 'A', 'B', 'C');
 }
