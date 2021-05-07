@@ -1,12 +1,21 @@
-#include<iostream>
+ï»¿#include<iostream>
 using namespace std;
 
 void Hanoi(int n, char from, char by, char to) {
 	/*	
-		int n : ÀÌµ¿ÇÒ ¿ø¹ÝÀÇ ¼ýÀÚ
-		char from : ÀÌµ¿ÇÒ ¿ø¹ÝÀÌ ÀÖ´Â Ãâ¹ßÁö Å¾
-		char by : ¿ø¹ÝÀ» ÀÌµ¿ÇÏ´Â °úÁ¤¿¡¼­ °ÅÃÄ°¡´Â Å¾
-		char to : ¿ø¹ÝÀ» ÀÌµ¿ÇÒ ¸ñÀûÁö Å¾
+		int n : ï¿½Ìµï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+		char from : ï¿½Ìµï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ Å¾
+		char by : ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ìµï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ä°ï¿½ï¿½ï¿½ Å¾
+		char to : ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ìµï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Å¾
 	*/
-	
+	if(n == 1){
+		cout << from << " => " << to << endl;
+	}else{
+		Hanoi(n-1, from, to, by);
+		cout << from << " => " << to << endl;
+		Hanoi(n-1, by, from, to);
+	}
+}
+int main(){
+	Hanoi(3, 'A', 'B', 'C');
 }
