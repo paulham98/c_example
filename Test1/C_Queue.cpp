@@ -1,10 +1,26 @@
-#include<stdio.h>
+#include<iostream>
+
+using namespace std;
+template <typename T>
+class Queue {
+public:
+	void Enqueue(const T&);
+	void Dequeue();
+	T& Front();
+	boolean IsEmpty();
+private:
+	int capacity;
+	int front = -1;
+	int rear;
+};
+
 
 int main() {
 
 
 }
-class Queue {
-	template <class T>
-	//inline bool queue<T>::IsEmpth() { return fornt == rear;  }
-}  ;
+void Enqueue(const T&) {
+};
+void Dequeue();
+T& Front();
+boolean IsEmpty();
