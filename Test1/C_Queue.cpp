@@ -13,7 +13,9 @@ private:
 	int front = -1;
 	int rear;
 };
-
+class PriorityQ {
+	friend Queue;
+};
 
 int main() {
 
