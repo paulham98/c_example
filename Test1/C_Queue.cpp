@@ -59,7 +59,6 @@ public:
 
 int main() {
 	Queue<int> q;
-
 	int number;
 	q.Enqueue(1);
 	q.Enqueue(2);
