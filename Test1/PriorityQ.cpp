@@ -13,7 +13,7 @@ public:
 };
 template <class T>class MaxHeap{
 private:
-    TreeNode<T> node[MAx];
+    TreeNode<T> node[MAX];
     int size;
 public:
     
