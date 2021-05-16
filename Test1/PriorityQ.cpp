@@ -6,6 +6,8 @@ template <class T>class TreeNode{
 private:
     int key;
     T data;
+    T* Leftchild;
+    T* Rightchild;
 public:
     int getKey();
     void setKey(int key);
