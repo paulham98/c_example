@@ -249,6 +249,9 @@
     <ClCompile Include="BST.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="C_Graph.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pointheader.h">
