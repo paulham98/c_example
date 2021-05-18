@@ -6,11 +6,8 @@ using namespace std;
 // adjacency Lists vs matrix       choose
 // memory			   time complexity
 
-void Graph:: LoadMatrix(std::string&filename){
-    int n;
+void Graph:: LoadMatrix(std::string& filename){
     scanf("%d", &n);
-    int vertex;
-    int matrix[n][n];
     for(int i = 0; i < n; i++){
         for(int j = 0; j < n; j++){
             scanf("%d ", &vertex);
@@ -18,15 +15,18 @@ void Graph:: LoadMatrix(std::string&filename){
         }
     }
 };
+void Graph:: PrintMatrix(){
+    for(int i = 0; i , n; )
+};
 
-// int main(void) {
-//     Graph g;
+int main(void) {
+    Graph g;
     
-//     string filename;
-//     getline(cin, filename);
+    string filename;
+    getline(cin, filename);
     
-//     g.LoadMatrix(filename);
-//     g.PrintMatrix();
+    g.LoadMatrix(filename);
+    g.PrintMatrix();
     
-//     return 0;
-// }
+    return 0;
+}
