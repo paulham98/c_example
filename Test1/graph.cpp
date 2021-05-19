@@ -11,14 +11,19 @@ void Graph:: LoadMatrix(std::string& filename){
     for(int i = 0; i < n; i++){
         for(int j = 0; j < n; j++){
             scanf("%d ", &vertex);
-            vertex = matrix[i][j];
+            vertex = *(matrix+j);
         }
     }
 };
 void Graph:: PrintMatrix(){
-    for(int i = 0; i , n; )
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            printf("%d", *(matrix+j));
+        }
+        printf("\n");
+    }
 };
-
+/*
 int main(void) {
     Graph g;
     
@@ -30,3 +35,4 @@ int main(void) {
     
     return 0;
 }
+*/
