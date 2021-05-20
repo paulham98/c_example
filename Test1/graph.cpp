@@ -7,10 +7,14 @@ using namespace std;
 // memory			   time complexity
 
 void Graph:: LoadMatrix(std::string& filename){
-    scanf("%d", &n);
+    cin >> n;
+    matrix = new int* [n];
+    for (int i = 0; i < n; i++) {
+        matrix[i] = new int[n];
+    }
     for(int i = 0; i < n; i++){
         for(int j = 0; j < n; j++){
-            scanf("%d ", &vertex);
+            scanf("%p ", &vertex);
             vertex = *(matrix+j);
         }
     }
@@ -18,21 +22,11 @@ void Graph:: LoadMatrix(std::string& filename){
 void Graph:: PrintMatrix(){
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < n; j++) {
-            printf("%d", *(matrix+j));
+            printf("%p", *(matrix+j));
         }
         printf("\n");
     }
+    for (int i = 0; i < n; i++) {
+        delete matrix[i];
+    }
 };
-/*
-int main(void) {
-    Graph g;
-    
-    string filename;
-    getline(cin, filename);
-    
-    g.LoadMatrix(filename);
-    g.PrintMatrix();
-    
-    return 0;
-}
-*/
