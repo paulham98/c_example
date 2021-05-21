@@ -22,8 +22,18 @@ void Graph:: LoadMatrix(std::string& filename){
     */
     ifstream fin(filename);
     fin >> n;
+    for (int i = 0; i < n; i++) {
+        matrix[i] = new int[n];
+    } // 2차원 배열 생성
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            fin >> vertex;
+            cout << vertex;
+            matrix[i][j] = vertex;
+        }
+    }
     cout << n << endl;
-   
+    
     
     char ch = NULL;
     while(fin.get(ch)){
@@ -36,17 +46,9 @@ void Graph:: LoadMatrix(std::string& filename){
     }
     cout << " 열림 " << endl;
     /*
-     for (int i = 0; i < n; i++) {
-        matrix[i] = new int[n];
-    } // 2차원 배열 생성;
+    
 
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < n; j++) {
-            fin >> vertex;
-            cout << vertex;
-            matrix[i][j] = vertex;
-        }
-    }
+    
     
     while (fin.get(ch)) {
         fin >> vertex;
