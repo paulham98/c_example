@@ -8,18 +8,6 @@ using namespace std;
 // memory			   time complexity
 
 void Graph:: LoadMatrix(std::string& filename){
-    /*cin >> n;
-    matrix = new int* [n];
-    for (int i = 0; i < n; i++) {
-        matrix[i] = new int[n];
-    }
-    for(int i = 0; i < n; i++){
-        for(int j = 0; j < n; j++){
-            scanf("%d ", &vertex);
-            matrix[i][j] = vertex;
-        }
-    }
-    */
     ifstream fin(filename);
     fin >> n;
     matrix = new int* [n];
@@ -43,8 +31,15 @@ void Graph:: PrintMatrix(){
     }
     
 };
+int Graph:: GetSize() {
+    ifstream fin("input2.txt");
+    fin >> n;
+    cout << n;
+    return n;
+}
+void Graph :: PrintShortestPathWeight(int s) {
 
-/*
+}
 int main(void) {
     Graph g;
 
@@ -53,9 +48,10 @@ int main(void) {
 
     g.LoadMatrix(filename);
     g.PrintMatrix();
-
+    int n = g.GetSize();
+    for (int i = 0; i < n; i++) {
+        g.PrintShortestPathWeight(i);
+    }
     return 0;
 }
-*/
-
 

@@ -19,4 +19,6 @@ public:
     }
     void LoadMatrix(std::string& filename);
     void PrintMatrix();
+    int GetSize();
+    void PrintShortestPathWeight(int s);
 };
