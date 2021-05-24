@@ -34,11 +34,15 @@ void Graph:: PrintMatrix(){
 int Graph:: GetSize() {
     ifstream fin("input2.txt");
     fin >> n;
-    cout << n;
+    cout << n << endl;
     return n;
 }
 void Graph :: PrintShortestPathWeight(int s) {
-
+    int* dist = new int[n];
+    for (int i = 0; i < n; i++) {
+        dist[i] = matrix[s][i];
+        cout << dist[i];
+    }
 }
 int main(void) {
     Graph g;
