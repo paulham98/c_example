@@ -8,7 +8,9 @@ class Graph{
 private:
     int n;
     int vertex;
-    int** matrix = nullptr;
+    int** matrix;
+    int* dist;
+    bool* check;
 public:
     
     ~Graph() {
@@ -21,4 +23,5 @@ public:
     void PrintMatrix();
     int GetSize();
     void PrintShortestPathWeight(int s);
+    int smallIndex();
 };
