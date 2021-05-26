@@ -73,13 +73,25 @@ void Graph :: PrintShortestPathWeight(int s) {
     }
     */
 }
+int Graph::min() {
+    // 한번돌때마다 dist[i]와 matrix[i][j]값을 다 넣고
+    //젤 작은거 반환 
+}
 void Graph::PrintShortestPath(int s) {
     //bellman 알고리즘 사용해야 할듯
+    // 생각해봐야 할 점:각각의 루트를 way에 넣어서 마지막에 프린트
     for (int i = 0; i < n; i++) {
         dist[i] = matrix[s][i];// 시작점 가중치 초기화
     }
-    for (int i = 0; i < n; i++) {
-        
+    // Dist[i]가 총 n-1만큼 돌고, 한번 돌때마다 dist[j]는
+    // j=i-1로 matrix[i][j]와 더해서 dist[i]와 비교
+    for (int i = 0; i < n-1; i++) {
+        for (int j = 0; j < n; j++) {
+            for (int u = 0; u < n; u++) {
+                if (dist[i] > dist[j] + matrix[i  ][j])
+                    dist[i] = dist[j] + matrix[i][j];
+            }
+        }
     }
 };
 int main(void) {
