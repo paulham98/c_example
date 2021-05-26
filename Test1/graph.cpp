@@ -21,7 +21,7 @@ void Graph:: LoadMatrix(std::string& filename){
         }
     }       
     fin.close();
-};
+}
 void Graph:: PrintMatrix(){
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < n; j++) {
@@ -30,20 +30,17 @@ void Graph:: PrintMatrix(){
         cout << "\n";
     }
     
-};
+}
 int Graph:: GetSize() {
-    ifstream fin("input2.txt");
-    fin >> n;
-    cout << n << endl;
+    
+    //cout << n << endl;
     return n;
 }
 int Graph:: smallIndex(){
     int min = 999;
     int id = 0;
-    int* dist = new int[n]; // 각각 vertex들의 최단거리
-    bool* check = new bool[n]; // 방문한 vertex 확인
     for(int i = 0; i < n; i++){
-        if(dist[i] < min && !check[i]){ // 시작점에서 가중치가 가장 작은 노드 검색 0 1 4 2
+        if(dist[i] < min && check[i] == false){ // 시작점에서 가중치가 가장 작은 노드 검색
             min = dist[i];  
             id = i;
         }
@@ -52,26 +49,39 @@ int Graph:: smallIndex(){
 }
 void Graph :: PrintShortestPathWeight(int s) {
    for (int i = 0; i < n; i++) {
-        dist[i] = matrix[s][i]; // 시작점 가중치
-        // cout << dist[i] << " ";
+       dist[i] = matrix[s][i];// 시작점 가중치 초기화
+       check[i] = false;
     }
     check[s] = true;
     for(int i = 0; i < n; i++){
         int cur = smallIndex();
-        cout << smallIndex();
         check[cur] = true;
+        cout << s << " ";
         for(int j =0; j < n; j++){
-            if(!check[j]){
+            if(check[j] == false){
                 if(dist[cur] + matrix[cur][j] < dist[j]){
                     dist[j] = dist[cur] + matrix[cur][j];
+                    
+                    cout <<j << " " << endl;
                 }
             }
         }
     }
+    /*
     for (int i = 0; i < n; i++) {
-        cout << dist[i] << " ";
-    } cout << "\n" << endl;
+        cout << dist[i] << endl;
+    }
+    */
 }
+void Graph::PrintShortestPath(int s) {
+    //bellman 알고리즘 사용해야 할듯
+    for (int i = 0; i < n; i++) {
+        dist[i] = matrix[s][i];// 시작점 가중치 초기화
+    }
+    for (int i = 0; i < n; i++) {
+        
+    }
+};
 int main(void) {
     Graph g;
 
@@ -79,13 +89,10 @@ int main(void) {
     getline(cin, filename);
 
     g.LoadMatrix(filename);
-    g.PrintMatrix();
-    int n = g.GetSize();
-    // for (int i = 0; i < n; i++) {
-    //     g.PrintShortestPathWeight(i);
-    // }
+    //g.PrintShortestPath(0);
     g.PrintShortestPathWeight(0);
-    // g.PrintShortestPathWeight(1);
     return 0;
 }
+
+
 
