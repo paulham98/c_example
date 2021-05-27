@@ -75,7 +75,7 @@ void Graph :: PrintShortestPathWeight(int s) {
 }
 int Graph::min() {
     // 한번돌때마다 dist[i]와 matrix[i][j]값을 다 넣고
-    //젤 작은거 반환 
+    // 젤 작은거 반환 
 }
 void Graph::PrintShortestPath(int s) {
     //bellman 알고리즘 사용해야 할듯
@@ -88,11 +88,17 @@ void Graph::PrintShortestPath(int s) {
     for (int i = 0; i < n-1; i++) {
         for (int j = 0; j < n; j++) {
             for (int u = 0; u < n; u++) {
-                if (dist[i] > dist[j] + matrix[i  ][j])
-                    dist[i] = dist[j] + matrix[i][j];
+                if (dist[j] > dist[u] + matrix[u][j]){
+                    dist[j] = dist[u] + matrix[u][j];
+                    cout << i << j << u << endl
+                }
             }
         }
     }
+    for(int i = 0 ; i< n; i++){
+        cout << dist[i] << " ";
+    }
+    
 };
 int main(void) {
     Graph g;
@@ -101,8 +107,8 @@ int main(void) {
     getline(cin, filename);
 
     g.LoadMatrix(filename);
-    //g.PrintShortestPath(0);
-    g.PrintShortestPathWeight(0);
+    g.PrintShortestPath(0);
+    //g.PrintShortestPathWeight(0);
     return 0;
 }
 
