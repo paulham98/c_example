@@ -3,6 +3,7 @@
 #include<string>
 #include<stdio.h>
 #include "graph.h"
+#include<queue>
 using namespace std;
 // adjacency Lists vs matrix       choose
 // memory			   time complexity
@@ -43,6 +44,7 @@ int Graph:: smallIndex(){
         if(dist[i] < min && check[i] == false){ // 시작점에서 가중치가 가장 작은 노드 검색
             min = dist[i];  
             id = i;
+            cout << id;
         }
     }
     return id;
@@ -56,68 +58,113 @@ void Graph :: PrintShortestPathWeight(int s) {
     for(int i = 0; i < n; i++){
         int cur = smallIndex();
         check[cur] = true;
-        cout << s << " ";
+        //cout << s << " ";
         for(int j =0; j < n; j++){
             if(check[j] == false){
                 if(dist[cur] + matrix[cur][j] < dist[j]){
                     dist[j] = dist[cur] + matrix[cur][j];
                     
-                    cout <<j << " " << endl;
+          //          cout <<j << " " << endl;
                 }
             }
         }
     }
-    /*
+    int** path = new int*[n];
+    
+    
     for (int i = 0; i < n; i++) {
         cout << dist[i] << endl;
     }
-    */
+    
 }
 int Graph::min() {
-    // 한번돌때마다 dist[i]와 matrix[i][j]값을 다 넣고
-    // 젤 작은거 반환 
+    return 0;
 }
+
 void Graph::PrintShortestPath(int s) {
-    
+    queue<int> q;
     //bellman 알고리즘 사용해야 할듯
     // 생각해봐야 할 점:각각의 루트를 way에 넣어서 마지막에 프린트
     for (int i = 0; i < n; i++) {
         dist[i] = matrix[s][i];// 시작점 가중치 초기화
     }
     int k = 0;
-    /*
+    
     // Dist[i]가 총 n-1만큼 돌고, 한번 돌때마다 dist[j]는
     // j=i-1로 matrix[i][j]와 더해서 dist[i]와 비교
+    /*
     for (int i = 0; i < n-1; i++) {
+       
         for (int j = 0; j < n; j++) {
+            
             for (int u = 0; u < n; u++) {
-                if (dist[j] > dist[u] + matrix[u][j]){
+                if (dist[j] > dist[u] + matrix[u][j]) {
                     dist[j] = dist[u] + matrix[u][j];
+               
+                 //   cout << u << " " << j << " " << endl;
+                    if (j != 0) {
+                        q.push(s);
+                        q.push(u);
+                        q.push(j);
+                    }
                     
-                    //cout << u << " " << j << " " << endl;
+                }
+                else{
+                    q.push(s);
+                    q.push(u);
                 }
             }
-
+            while (!q.empty()) {
+                cout << q.front() << " ";
+                q.pop();
+            }
         }
 
     }
     */
+    for (int i = 0; i < n; i++) {
+        q.push(s);
+        for (int j = 0; j < n; i++) {
+            for (int k = 0; k < n; k++) {
+                if (dist[k] > dist[j] + matrix[j][k]) {
+                    dist[k] = dist[j] + matrix[j][k];
+                    q.push(k);
+                }
+            }
+        }
+        q.push(i+1);
+        while (!q.empty()) {
+            cout << q.front() << " ";
+            q.pop();
+        }
+    }
+    /*
    bool update  = 1;
    while(update){
        update = 0;
+      
        for(int i = 0; i < n; i++){
            for(int j =0; j < n; j++){
                if(dist[j] > dist[i] + matrix[i][j]){
                    dist[j] = dist[i] + matrix[i][j];
+                   cout << i << " ";
+                   cout << j << " " << endl;
+                   update = 1;
                }
+           }
+           
+           while (!q.empty()) {
+               cout << q.front() << " ";
+               q.pop();
            }
        }
    }
-    
-    
+   */
+   
+    /*
     for(int i = 0 ; i< n; i++){
         cout << dist[i] << " ";
-    }
+    }*/
     
 };
 int main(void) {
