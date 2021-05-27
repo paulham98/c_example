@@ -58,19 +58,15 @@ void Graph :: PrintShortestPathWeight(int s) {
     for(int i = 0; i < n; i++){
         int cur = smallIndex();
         check[cur] = true;
-        //cout << s << " ";
         for(int j =0; j < n; j++){
             if(check[j] == false){
                 if(dist[cur] + matrix[cur][j] < dist[j]){
                     dist[j] = dist[cur] + matrix[cur][j];
-                    
-          //          cout <<j << " " << endl;
+                             
                 }
             }
         }
     }
-    int** path = new int*[n];
-    
     
     for (int i = 0; i < n; i++) {
         cout << dist[i] << endl;
