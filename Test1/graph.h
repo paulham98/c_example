@@ -9,9 +9,9 @@ private:
     int n;
     int vertex;
     int** matrix;
-    int* dist = new int[n];// 각각 vertex들의 최단거리  
-    bool* check = new bool[n];// 방문한 vertex 확인
-    int* way = new int[n];
+    int* dist;// 각각 vertex들의 최단거리  
+    bool* check;// 방문한 vertex 확인
+    int* path;
 public:
    
     ~Graph() {
@@ -27,5 +27,4 @@ public:
     void PrintShortestPathWeight(int s);
     int smallIndex();
     void PrintShortestPath(int s);
-    int min();
 };
