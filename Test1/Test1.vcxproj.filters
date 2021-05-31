@@ -260,9 +260,6 @@
     <ClInclude Include="pointheader.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClCompile Include="jang.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClInclude Include="Rectangle.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>

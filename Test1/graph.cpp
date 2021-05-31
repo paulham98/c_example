@@ -37,7 +37,7 @@ void Graph:: PrintMatrix(){
 }
 int Graph:: GetSize() {
     
-    //cout << n << endl;
+    
     return n;
 }
 int Graph:: smallIndex(){
@@ -139,12 +139,9 @@ vector<int> v(n);
             }
         }
     }
-    
-
-
 
 stack<int> stk;
-queue<int> q;
+
     for(int i = 0; i < n; i++){
         if(i == s) continue;
         cout << s << " ";
