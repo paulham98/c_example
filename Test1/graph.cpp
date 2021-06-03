@@ -161,7 +161,7 @@ stack<int> stk;
         
     }
 };
-/*
+
 int main(void) {
     Graph g;
     
@@ -175,5 +175,5 @@ int main(void) {
     }
     return 0;
 }
-*/
+
 
