@@ -73,10 +73,6 @@ void Graph :: PrintShortestPathWeight(int s) {
             }
         }
     }
-    
-    
-    
-    
     for (int i = 0; i < n; i++) {
         cout << dist[i] << endl;
     }
