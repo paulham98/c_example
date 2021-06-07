@@ -135,9 +135,7 @@ vector<int> v(n);
             }
         }
     }
-
 stack<int> stk;
-
     for(int i = 0; i < n; i++){
         if(i == s) continue;
         cout << s << " ";
@@ -153,14 +151,12 @@ stack<int> stk;
             cout << a << " ";
         }
         printf("%d", i);
-        cout << endl;
-        
+        cout << endl;   
     }
 };
 
 int main(void) {
     Graph g;
-    
     string filename;
     getline(cin, filename);
     
