@@ -4,7 +4,7 @@
 #include<vector>
 #include "graph.h"
 #include<stack>
-#include<queue>
+
 
 using namespace std;
 // adjacency Lists vs matrix       choose
@@ -33,11 +33,8 @@ void Graph:: PrintMatrix(){
         }
         cout << "\n";
     }
-    
 }
 int Graph:: GetSize() {
-    
-    
     return n;
 }
 int Graph:: smallIndex(){
@@ -154,7 +151,6 @@ stack<int> stk;
         cout << endl;   
     }
 };
-
 int main(void) {
     Graph g;
     string filename;
