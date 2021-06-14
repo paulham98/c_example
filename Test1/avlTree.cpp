@@ -4,6 +4,8 @@ class Bst {
 private:
 	int* node;
 	int element;
+public:
+	void LoadMatrix();
 };
 
 
