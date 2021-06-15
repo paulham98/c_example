@@ -5,6 +5,7 @@ private:
 	int* node;
 	int element;
 public:
+	int GetSize();
 	void LoadMatrix();
 };
 
