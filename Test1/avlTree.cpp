@@ -4,12 +4,14 @@ class Bst {
 private:
 	int* node;
 	int element;
+	int size;
 public:
-	int GetSize();
+	int GetSize() {
+		return size;
+	}
 	void LoadMatrix();
 };
 
 
-int main() {
-
+int main(){
 }
