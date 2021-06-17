@@ -10,6 +10,9 @@ public:
 		return size;
 	}
 	void LoadMatrix();
+	void PrintDFS();
+	void PrintBFS();
+
 };
 
 
