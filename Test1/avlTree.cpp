@@ -13,11 +13,14 @@ private:
 	int element;
 	int size;
 	int n;
+	int** matrix;
 public:
 	int GetSize() {
 		return size;
 	}
-	void LoadMatrix();
+	void LoadMatrix(int** matrix, int n) {
+		*matrix = new int[n];
+	}
 	void PrintDFS();
 	void PrintBFS();
 
