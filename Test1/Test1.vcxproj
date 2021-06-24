@@ -167,7 +167,7 @@
     <ClCompile Include="1093.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="avlTree.cpp" />
+    <ClCompile Include="BiTree.cpp" />
     <ClCompile Include="C_Algorithm_LinkedList.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>

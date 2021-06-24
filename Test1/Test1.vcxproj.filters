@@ -252,7 +252,7 @@
     <ClCompile Include="graph.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="avlTree.cpp">
+    <ClCompile Include="BiTree.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
