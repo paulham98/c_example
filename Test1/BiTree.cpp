@@ -23,11 +23,13 @@ public:
 	void LoadMatrix(int** matrix, int n) {
 		*matrix = new int[n];
 		for (int i = 0; i < n; i++) {
-			pritnf("%d", matrix[i]);
+			printf("%d", matrix[i]);
 		}
 	}
 	void PrintDFS();
 	void PrintBFS();
+	void push();
+	void pop();
 
 };
 
