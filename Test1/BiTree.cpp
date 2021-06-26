@@ -1,7 +1,10 @@
 #include<iostream>
 #include<vector>
 using namespace std;
+template <class T>class Bst;
+
 template<class T> class Node {
+	friend class Bst<T>;
 private:
 	T data;
 	Node<T>* LeftChild;
@@ -9,7 +12,8 @@ private:
 };
 // 노드를 하나씩 만들고..
 // 이진트리를 만드는 헤더파일이 필요할거 같은데
-class Bst {
+
+template <class T>class Bst{
 private:
 	int* node;
 	int element;
@@ -28,8 +32,19 @@ public:
 	}
 	void PrintDFS();
 	void PrintBFS();
-	void push();
+	void push(int n){
+		Node<T>* new_node = new Node<T>;
+		size++;
+		new_data->data = n;
+		new_node->LeftChild = NULL;
+		new_node->RightChild = NULL;
+	};
 	void pop();
+	void print(){
+		for(int i = 0; i < n; i++){
+			if(T* leftChild)
+		}
+	};
 
 };
 
