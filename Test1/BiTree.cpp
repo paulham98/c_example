@@ -11,7 +11,6 @@ private:
 // 이진트리를 만드는 헤더파일이 필요할거 같은데
 class Bst {
 private:
-	int* node;
 	int element;
 	int size;
 	int n;
