@@ -7,6 +7,7 @@ template<class T> class Node {
 	friend class Bst<T>;
 private:
 	T data;
+	T index;
 	Node<T>* LeftChild;
 	Node<T>* RightChild;
 };
@@ -33,12 +34,15 @@ public:
 	void PrintBFS();
 	void push(int n){
 		Node<T>* new_node = new Node<T>;
+		++index;
 		size++;
 		new_data->data = n;
 		new_node->LeftChild = NULL;
 		new_node->RightChild = NULL;
 	};
-	void pop();
+	void pop(){
+
+	};
 	void print(){
 		for(int i = 0; i < n; i++){
 			if(T* leftChild)
@@ -49,4 +53,9 @@ public:
 
 
 int main(){
+	
+	int* matrix;
+	int d;
+	scanf("%d", &d);
+	
 }
