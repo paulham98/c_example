@@ -27,11 +27,13 @@ public:
 	void LoadMatrix(int** matrix, int n) {
 		*matrix = new int[n];
 		for (int i = 0; i < n; i++) {
-			printf("%d", matrix[i]);
+			printf("%p", matrix[i]);
 		}
 	}
-	void PrintDFS();
-	void PrintBFS();
+	void DFS(){
+		
+	}
+	void BFS();
 	void push(int n){
 		Node<T>* new_node = new Node<T>;
 		++index;
