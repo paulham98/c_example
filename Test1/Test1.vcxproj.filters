@@ -266,5 +266,8 @@
     <ClInclude Include="graph.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="BiTree.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

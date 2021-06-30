@@ -1,40 +1,28 @@
 #include<iostream>
 #include<vector>
+#include "Bitree.h"
 using namespace std;
-template <class T>class Bst;
 
-template<class T> class Node {
-	friend class Bst<T>;
-private:
-	T data;
-	T index;
-	Node<T>* LeftChild;
-	Node<T>* RightChild;
-};
-// 노드를 하나씩 만들고..
-// 이진트리를 만드는 헤더파일이 필요할거 같은데
 
-template <class T>class Bst{
-private:
-	int element;
-	int size;
-	int n;
-	int** matrix;
-public:
-	int GetSize() {
+
+int Bst :: GetSize() {
 		return size;
 	}
+	/* 필요있나?
 	void LoadMatrix(int** matrix, int n) {
 		*matrix = new int[n];
 		for (int i = 0; i < n; i++) {
 			printf("%p", matrix[i]);
 		}
 	}
-	void DFS(){
+	*/
+void  Bst::DFS(){
 		
 	}
-	void BFS();
-	void push(int n){
+void  Bst::BFS() {
+
+	}
+void  Bst::push(int n){
 		Node<T>* new_node = new Node<T>;
 		++index;
 		size++;
@@ -42,10 +30,10 @@ public:
 		new_node->LeftChild = NULL;
 		new_node->RightChild = NULL;
 	};
-	void pop(){
+void Bst::pop(){
 
 	};
-	void print(){
+void Bst::print(){
 		for(int i = 0; i < n; i++){
 			if(T* leftChild)
 		}
@@ -55,9 +43,7 @@ public:
 
 
 int main(){
+	int* arr;
+	Bst b;
 	
-	int* matrix;
-	int d;
-	scanf("%d", &d);
 	
-}
