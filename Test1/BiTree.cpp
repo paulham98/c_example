@@ -3,8 +3,6 @@
 #include "Bitree.h"
 using namespace std;
 
-
-
 int Bst :: GetSize() {
 		return size;
 	}
@@ -29,19 +27,28 @@ void Bst::push(int n){
 		new_node->data = n;
 		new_node->LeftChild = NULL;
 		new_node->RightChild = NULL;
+		if (root == NULL) {
+			root = new_node;
+		}
 	};
 void Bst::pop(){
-
+	if (root == NULL) {
+		printf("Tree is Empty!");
+	}
+	else {
+		
+	}
 	};
 void Bst::print(){
-		for(int i = 0; i < n; i++){
-		}
+	Node* cur = NULL;
+
 	};
 
 
 
 int main() {
-	int* arr;
+	int* arr = new int[5];
+	arr[0] = 23;
 	Bst b;
-
+	b.push(arr[0]);
 }
