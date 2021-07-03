@@ -22,6 +22,8 @@ void Bst::BFS() {
 	}
 void Bst::push(int n){
 		Node* new_node = new Node;
+		Node* parent = NULL;
+		Node* current = root;
 		index++;
 		size++;
 		new_node->data = n;

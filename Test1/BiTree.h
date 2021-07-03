@@ -7,7 +7,6 @@ using namespace std;
 	friend class Bst;
 private:
 	int data;
-	
 	int* LeftChild;
 	int* RightChild;
 };
