@@ -29,6 +29,7 @@ void Bst::push(int n){
 		new_node->data = n;
 		new_node->LeftChild = NULL;
 		new_node->RightChild = NULL;
+		new_node->rear = NULL;
 		if (root == NULL) {
 			root = new_node;
 		}
