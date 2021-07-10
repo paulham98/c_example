@@ -34,8 +34,6 @@ private:
 	int n;
 	int** matrix;
 	Node* root;
-	
-	
 public:
 	int GetSize();
 	void LoadMatrix(int** matrix, int n);
