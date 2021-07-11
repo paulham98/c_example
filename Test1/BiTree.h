@@ -42,4 +42,5 @@ public:
 	void push(int n);
 	void pop();
 	void print();
+	void index();
 	};
